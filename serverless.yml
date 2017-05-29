@@ -17,5 +17,5 @@ functions:
     handler: handler.endpoint
     events:
       - http:
-          path: move
+          path: move/{board}
           method: get
