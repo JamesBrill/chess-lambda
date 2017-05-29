@@ -1,3 +1,9 @@
 .serverless
 *.pyc
 *.pyo
+.DS_Store
+env
+__pycache__
+node_modules
+vendored
+stockfish_mac
