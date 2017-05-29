@@ -1,7 +1,7 @@
 {
-  "name": "aws-simple-http-endpoint",
+  "name": "chess-lambda",
   "version": "1.0.0",
-  "description": "Example demonstrates how to setup a simple HTTP GET endpoint with python",
-  "author": "",
+  "description": "Given a chess board position, get a move to play.",
+  "author": "James Brill",
   "license": "MIT"
 }
