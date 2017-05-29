@@ -15,9 +15,9 @@ provider:
     ENV: PROD
 
 functions:
-  currentTime:
+  getMove:
     handler: handler.endpoint
     events:
       - http:
-          path: ping
+          path: move
           method: get
