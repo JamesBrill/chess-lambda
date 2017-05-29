@@ -13,7 +13,11 @@ import chess.uci
 
 def endpoint(event, context):
     position = "1k1r4/pp1b1R2/3q2pp/4p3/2B5/4Q3/PPP2B2/2K5 b - - 0 1"
-    engine = chess.uci.popen_engine("./stockfish_linux")
+    if os.environ['ENV'] == "PROD":
+        engine_binary = "./stockfish_linux"
+    else:
+        engine_binary = "./stockfish_mac"
+    engine = chess.uci.popen_engine(engine_binary)
     engine.uci()
     board = chess.Board(position)
     engine.position(board)

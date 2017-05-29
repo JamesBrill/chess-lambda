@@ -3,6 +3,7 @@ service: aws-python-simple-http-endpoint
 package:
   exclude:
     - env
+    - stockfish_mac
 
 frameworkVersion: ">=1.2.0 <2.0.0"
 
@@ -10,6 +11,8 @@ provider:
   name: aws
   runtime: python3.6
   profile: serverless
+  environment:
+    ENV: PROD
 
 functions:
   currentTime:
