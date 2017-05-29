@@ -9,10 +9,11 @@ import json
 import datetime
 import chess
 import chess.uci
+from urllib.parse import unquote
 
 
 def endpoint(event, context):
-    position = "1k1r4/pp1b1R2/3q2pp/4p3/2B5/4Q3/PPP2B2/2K5 b - - 0 1"
+    position = unquote(event['pathParameters'].get('board', 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'))
     if os.environ.get('IS_LOCAL') == "true":
         engine_binary = "./stockfish_mac"
     else:
